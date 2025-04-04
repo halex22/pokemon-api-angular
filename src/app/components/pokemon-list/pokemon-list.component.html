@@ -1,0 +1,17 @@
+<div class="preview-container">
+<router-outlet />
+</div>
+
+<ul>
+  <li *ngFor="let pokemon of pokemons">
+    <div class="pokeball-container">
+      <img src="/pokeball.svg" alt="">
+    </div>
+    <h2>
+      <a [routerLink]="['preview', pokemon.name, pokemon.sprites.front_default]">
+        {{pokemon.name}}
+      </a>
+    </h2>
+    
+  </li>
+</ul>

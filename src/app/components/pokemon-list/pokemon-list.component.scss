@@ -1,0 +1,34 @@
+:host {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.preview-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    background-color: white;
+    padding: 1rem;
+    border: 2px solid black;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    
+
+}
+
+.pokeball-container {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}

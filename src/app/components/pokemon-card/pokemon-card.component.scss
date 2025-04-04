@@ -1,0 +1,19 @@
+.poke-prev-img {
+    display: flex;
+    justify-content: center;
+
+    min-width: 4rem;
+    min-height: 4rem;
+
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.pb-bg {
+    position: absolute;
+    z-index: -1;
+}

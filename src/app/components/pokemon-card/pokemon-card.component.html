@@ -1,0 +1,11 @@
+<h3>Preview di {{pokemonName}} </h3>
+<div class="poke-prev-img">
+  
+  <img src="/pokeball-bg.svg" alt="" class="pb-bg">
+  
+  
+  <img [src]="pokeImg" alt="">
+</div>
+
+<a [routerLink]="['pokemon', pokemonName]">go to details</a>
+
