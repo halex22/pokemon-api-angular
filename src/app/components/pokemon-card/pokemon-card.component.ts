@@ -12,6 +12,6 @@ import { Input } from '@angular/core';
 export class PokemonCardComponent {
 
   @Input({required:true}) name!: string
-  @Input({required:true}) img!: string
+  @Input({required:true}) id!: string
 
 }

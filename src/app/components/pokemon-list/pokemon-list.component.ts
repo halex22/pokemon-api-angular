@@ -4,6 +4,7 @@ import { DataService } from '../../services/data.service';
 import { NgFor } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { type MiniResponse } from '../../models/base-response';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -13,7 +14,8 @@ import { RouterModule } from '@angular/router';
 })
 export class PokemonListComponent {
 
-  pokemons: Pokemon[] = []
+
+  pokemons: MiniResponse[] = []
   private dataservice = inject(DataService)
   
   constructor() {

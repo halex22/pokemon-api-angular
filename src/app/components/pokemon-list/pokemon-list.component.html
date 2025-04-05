@@ -3,15 +3,15 @@
 </div>
 
 <ul>
-  <li *ngFor="let pokemon of pokemons" routerLinkActive="selected">
+  <li *ngFor="let pokemon of pokemons; track $index" routerLinkActive="selected">
 
     <div class="pokeball-container">
       <img src="/pokeball.svg" alt="">
     </div>
     <div class="pokemon-name-wrapper">
       <h3 class="pokemon-name">
-        <a [routerLink]="['preview', pokemon.name, pokemon.sprites.front_default]">
-          {{pokemon.name}}
+        <a [routerLink]="['preview', pokemon.name, pokemon.id]">
+        {{pokemon.name}}
         </a>
       </h3>
     </div>

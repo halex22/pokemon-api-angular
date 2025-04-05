@@ -1,6 +1,6 @@
 :host {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 3fr 3fr;
 }
 
 .selected {
@@ -8,6 +8,11 @@
     border-radius: 1rem;
     border-top-left-radius: 0.1rem;
     border-bottom-left-radius: 0.1rem;
+
+    .pokeball-container {
+        border-radius: 0 !important;
+    }
+      
 
 }
 

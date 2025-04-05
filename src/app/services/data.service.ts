@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { type Pokemon } from '../models/pokemon';
 import { type BaseResponse } from '../models/base-response';
+import { type MiniResponse } from '../models/base-response';
 
 
 @Injectable({
@@ -10,18 +11,27 @@ export class DataService {
 
   private baseUrl = 'https://pokeapi.co/api/v2/'
   private offSet = 0
-  private limit = 10
+  private limit = 20
 
   constructor() { }
 
-  getPokemonData(): Promise<Pokemon[]> {
-    
+  getPokemonData(): Promise<MiniResponse[]> {
     const endpoint = this.baseUrl + `pokemon?offset=${this.offSet}&limit=${this.limit}`
     return fetch(endpoint)
     .then(res => res.json())
     .then(data  => {
       const formattedData = data as BaseResponse
-      return Promise.all(formattedData.results.map((result) => this.getPokemonByName(result.name)))
+      return Promise.all(formattedData.results
+        .map(
+          (result) => this.getPokemonByName(result.name)
+          .then(data => {
+            const mini: MiniResponse = {
+              id: data.id,
+              name: data.name,
+            }
+            return mini
+          })
+        ))
     })
   }
 
