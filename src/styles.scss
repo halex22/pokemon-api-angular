@@ -5,12 +5,10 @@ body {
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
   font-style: normal;
-//   background-image: url('/bg_3.jpg');
   background-color: #ffffff;
-  opacity: 0.8;
-  background-image:  linear-gradient(#d2d2d2 1px, transparent 1px), linear-gradient(to right, #d2d2d2 1px, #ffffff 1px);
+  background-image:  linear-gradient(#d2d2d2 1px, transparent 3px), linear-gradient(to right, #d2d2d2 3px, #ffffff 2px);
   background-size: 45px 45px;
-  color: rgb(78, 78, 78);
+  color: rgba(78, 78, 78, 0.653);
 }
 
 .pokemon-name{

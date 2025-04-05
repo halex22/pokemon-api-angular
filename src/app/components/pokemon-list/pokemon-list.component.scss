@@ -4,9 +4,11 @@
 }
 
 .selected {
-    border: 4px black solid;
+    border: 8px rgb(226, 95, 95) solid;
     border-radius: 1rem;
-    // padding: 0.5rem 1rem;
+    border-top-left-radius: 0.1rem;
+    border-bottom-left-radius: 0.1rem;
+
 }
 
 .preview-container {
@@ -22,14 +24,28 @@ ul {
     border-radius: 1rem;
     margin: 0;
     padding: 0;
+
+    li:first-child {
+        .pokeball-container {
+          border-top-left-radius: 0.75rem;
+        }
+      }
+  
+      li:last-child {
+          .pokeball-container {
+              border-bottom-left-radius: 0.75rem;
+          }
+      }
 }
+
+
 
 li {
     display: flex;
     align-items: center;
     
-
 }
+
 
 .pokeball-container {
     margin-right: 0.5rem;
@@ -40,14 +56,3 @@ li {
         height: 100%;
     }
 }
-
-
-// .pokemon-name-wrapper {
-    
-//     background-color: white;
-//     width: 100%;
-
-//     h3 {
-//         padding-left: 1rem;
-//     }
-// }
