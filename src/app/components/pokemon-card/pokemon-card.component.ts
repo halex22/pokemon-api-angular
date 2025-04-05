@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
+import { Input } from '@angular/core';
 
 
 @Component({
@@ -10,15 +11,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 })
 export class PokemonCardComponent {
 
-  pokemonName!: string 
-  pokeImg!: string
+  @Input({required:true}) name!: string
+  @Input({required:true}) img!: string
 
-  constructor (private route: ActivatedRoute) {}
-
-  ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.pokemonName = params['name'];
-      this.pokeImg = params['img'];
-    });
-  }
 }

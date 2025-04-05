@@ -1,6 +1,12 @@
 :host {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 3fr 2fr;
+}
+
+.selected {
+    border: 4px black solid;
+    border-radius: 1rem;
+    // padding: 0.5rem 1rem;
 }
 
 .preview-container {
@@ -12,7 +18,10 @@
 ul {
     background-color: white;
     padding: 1rem;
-    border: 2px solid black;
+    border: 4px solid black;
+    border-radius: 1rem;
+    margin: 0;
+    padding: 0;
 }
 
 li {
@@ -23,12 +32,22 @@ li {
 }
 
 .pokeball-container {
-    width: 2rem;
-    height: 2rem;
     margin-right: 0.5rem;
+    background-color: red;
 
     img {
         width: 100%;
         height: 100%;
     }
 }
+
+
+// .pokemon-name-wrapper {
+    
+//     background-color: white;
+//     width: 100%;
+
+//     h3 {
+//         padding-left: 1rem;
+//     }
+// }

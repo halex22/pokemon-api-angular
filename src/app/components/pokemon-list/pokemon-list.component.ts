@@ -3,11 +3,11 @@ import { Pokemon } from '../../models/pokemon';
 import { DataService } from '../../services/data.service';
 import { NgFor } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { RouterLink } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-pokemon-list',
-  imports: [NgFor, RouterOutlet, RouterLink],
+  imports: [NgFor, RouterOutlet, RouterModule],
   templateUrl: './pokemon-list.component.html',
   styleUrl: './pokemon-list.component.scss'
 })

@@ -3,15 +3,23 @@
 </div>
 
 <ul>
-  <li *ngFor="let pokemon of pokemons">
+  <li *ngFor="let pokemon of pokemons" routerLinkActive="selected">
+
+    <div class="outer-white"></div>
+
+    <div class="inner-red"></div>
+    <div class="inner-white"></div>
     <div class="pokeball-container">
       <img src="/pokeball.svg" alt="">
     </div>
-    <h2>
-      <a [routerLink]="['preview', pokemon.name, pokemon.sprites.front_default]">
-        {{pokemon.name}}
-      </a>
-    </h2>
+    <div class="pokemon-name-wrapper">
+      <h3 class="pokemon-name">
+        <a [routerLink]="['preview', pokemon.name, pokemon.sprites.front_default]">
+          {{pokemon.name}}
+        </a>
+      </h3>
+    </div>
+    
     
   </li>
 </ul>
