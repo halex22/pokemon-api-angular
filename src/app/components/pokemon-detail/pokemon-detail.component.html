@@ -1,1 +1,46 @@
-<p>pokemon-detail works!</p>
+<div class="upper-layout">
+  <div class="img-container">
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{pokemon?.id}}.png" alt="">
+  </div>
+
+  <div class="info">
+    <div class="name-wrapper">
+      <h2 class="pokemon-name">{{pokemon?.name}}</h2>
+      <div class="after-name"></div>
+      <div class="white-after-name"></div>
+    </div>
+
+    <div class="types-container">
+      <span *ngFor="let type of pokemon?.types" class="type-badge" [ngClass]="'type-' + type.type.name">
+      {{ type.type.name }}
+      </span>
+    </div>
+
+    <div class="w-and-h">
+
+      <div class="unit-wrapper">
+        <div class="red-init"></div>
+        <div class="unit-container">
+          <span>Height</span>  
+          <span><strong>{{pokemon?.height}}m</strong></span>
+          
+        </div> 
+      </div>
+
+
+
+      <div class="unit-wrapper">
+        <div class="red-init"></div>
+
+        <div class="unit-container">
+          <span>Width</span>
+          <span><strong>{{pokemon?.weight}}kg</strong> </span> 
+        </div>
+        
+      </div>      
+      
+        
+      
+    </div>
+  </div>
+</div>

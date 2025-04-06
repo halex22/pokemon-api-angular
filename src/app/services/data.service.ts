@@ -11,8 +11,7 @@ export class DataService {
 
   private baseUrl = 'https://pokeapi.co/api/v2/'
   private offSet = 0
-  private limit = 20
-
+  private limit = 10
   constructor() { }
 
   getPokemonData(): Promise<MiniResponse[]> {
