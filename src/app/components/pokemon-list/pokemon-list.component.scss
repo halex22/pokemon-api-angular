@@ -30,6 +30,9 @@ ul {
     margin: 0;
     padding: 0;
 
+    max-height: 100vh;
+    overflow: scroll;
+
     li:first-child {
         .pokeball-container {
           border-top-left-radius: 0.75rem;

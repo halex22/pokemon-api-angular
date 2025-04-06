@@ -3,7 +3,7 @@
 </div>
 
 <ul>
-  <li *ngFor="let pokemon of pokemons; track $index" routerLinkActive="selected">
+  <li *ngFor="let pokemon of pokemons" routerLinkActive="selected">
 
     <div class="pokeball-container">
       <img src="/pokeball.svg" alt="">
@@ -15,7 +15,8 @@
         </a>
       </h3>
     </div>
-    
-    
   </li>
+  <div>
+    <button (click)="loadMore()">More</button>
+  </div>
 </ul>

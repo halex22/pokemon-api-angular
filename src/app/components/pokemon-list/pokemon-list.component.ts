@@ -25,4 +25,10 @@ export class PokemonListComponent {
       this.pokemons = data
     })
   }
+
+  loadMore() {
+    console.log('clicked')
+    this.dataservice.getNextPage()
+    .then(newPokemons => this.pokemons = [...this.pokemons, ...newPokemons])
+  }
 }

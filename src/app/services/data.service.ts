@@ -36,7 +36,7 @@ export class DataService {
 
   getNextPage() {
     this.offSet += this.limit
-    this.getPokemonData()
+    return this.getPokemonData()
   }
 
   getPokemonByName(pokemonName: string): Promise<Pokemon> {
